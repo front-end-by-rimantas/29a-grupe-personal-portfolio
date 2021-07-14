@@ -23,7 +23,7 @@ Site published at : https://front-end-by-rimantas.github.io/29a-grupe-personal-p
 # Authors
 
 [Egidijus](https://github.com/full-stack-nodejs),
-[Karolis](https://github.com/KKaciusis),
+[Kristijonas](https://github.com/KKaciusis),
 [Gintautas](https://github.com/gikeris),
 [Anatolijus](https://github.com/AnatolijusZ),
 [Dominykas](https://github.com/domsau-dev)
