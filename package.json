@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "AnatolisZ, gikeris, domsau-dev, full-stack-nodejs, KKaciusis",
+  "author": "AnatolijusZ, gikeris, domsau-dev, full-stack-nodejs, KKaciusis",
   "license": "MIT",
   "devDependencies": {
     "live-server": "^1.2.1"
