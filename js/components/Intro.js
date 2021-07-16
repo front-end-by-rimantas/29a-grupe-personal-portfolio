@@ -38,14 +38,14 @@ class Intro {
 
     render() {
         const HTML = `<div class="row">
-                            <div class="col-12 col-md-6 col-lg-5 intro-left">
+                            <div class="col-12 col-md-6 col-lg-6 intro-left">
                                 <h6>This is me</h6>
                                 <h1>Philip Gilbert</h1>
                                 <p>You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost
                                     showing Scrooge some different futures.</p>
                                 <a href="#" class="primary-btn text-uppercase">discover now</a>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-7">
+                            <div class="col-12 col-md-6 col-lg-6">
                                 <img class="introImg" src="./img/hero-img.png" alt="Philip Gilbert">
                             </div>
                         </div>`;
