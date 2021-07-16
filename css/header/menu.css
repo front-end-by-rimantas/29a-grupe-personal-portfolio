@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    float: right;
+    grid-column: 12;
+    align-items: center;
+}
+nav > a {
+    text-decoration: none;
+    color: #777777;
+    font-size: 18px;
+}
+.menu-home {
+    color: #8490ff;
+    font-weight: 550;
+}
