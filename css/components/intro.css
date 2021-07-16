@@ -3,7 +3,6 @@ body {
         font-size: 14px;
 }
 
-
 .intro {
     background-color: #f9f9ff;
 }
@@ -16,7 +15,7 @@ h1 {
     text-transform: uppercase;
     margin: 20px 0;
     font-weight: 600;
-
+    font-size: 30px;
 }
 
 h6 {
@@ -31,4 +30,37 @@ p {
     line-height: 1.625em;
     margin-block-start: 1em;
     margin-block-end: 1em;
+}
+
+.introImg {
+    float: center; 
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+} 
+
+@media (min-width: 640px) {
+    .introImg {
+        float: left; 
+        width: 80%;
+        margin: 10%;
+    } 
+}
+
+@media (min-width: 800px) {
+    .intro-left {
+        padding-top: 100px;
+    }
+}
+
+@media (min-width: 1080px) {
+    h1 {
+        font-size: 20px;
+    }
+    .intro-left {
+        padding-top: 100px;
+    }
+    .intro-left {
+        padding-top: 150px;
+    }
 }
