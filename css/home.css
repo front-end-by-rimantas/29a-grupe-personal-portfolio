@@ -2,15 +2,17 @@
 @import './base/reset.css';
 @import './base/layout.css';
 @import './base/variables.css';
+@import './base/layout.css';
 
 /* 3rd-party */
 
 /* components */
 @import './components/button.css';
-
 /* CUSTOM STYLE FOR HOME PAGE */
 
 /* HEADER START */
+@import './header/menu.css';
+@import './header/header.css';
 /* HEADER END */
 
 /* INTRODUCTION START */
