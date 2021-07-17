@@ -41,8 +41,7 @@ class Intro {
                             <div class="col-12 col-md-6 col-lg-6 intro-left">
                                 <h6>This is me</h6>
                                 <h1>Philip Gilbert</h1>
-                                <p>You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost
-                                    showing Scrooge some different futures.</p>
+                                <p>You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost showing Scrooge some different futures.</p>
                                 <a href="#" class="primary-btn text-uppercase">discover now</a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-6">
