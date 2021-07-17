@@ -1,0 +1,13 @@
+.featured-projects > .row {
+    text-align: center;
+}
+
+.featured-projects > .row > .projects-header {
+    grid-column-start: 3;
+}
+
+.featured-projects > .row.project-types > div > span {
+    margin-left: 15px;
+    margin-right: 15px;
+    text-transform: uppercase;
+}
