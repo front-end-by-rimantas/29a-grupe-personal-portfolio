@@ -1,5 +1,6 @@
 /* IMPORTS */
 import { Intro } from "./components/Intro.js";
+import { About } from "./components/About.js";
 
 /* CODE EXECUTION */
 
@@ -7,12 +8,15 @@ import { Intro } from "./components/Intro.js";
 /* HEADER END */
 
 /* INTRODUCTION START */
+
 const intro = new Intro(".intro");
 intro.init();
 
 /* INTRODUCTION END */
 
 /* ABOUT START */
+const about = new About(".about");
+about.init();
 /* ABOUT END */
 
 /* SERVICES START */
