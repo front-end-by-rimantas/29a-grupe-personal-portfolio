@@ -2,12 +2,13 @@
   "name": "29a-grupe-portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "home.js",
   "scripts": {
+    "dev": "live-server --port=3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Rimantas Belovas",
+  "author": "AnatolijusZ, gikeris, domsau-dev, full-stack-nodejs, KKaciusis",
   "license": "MIT",
   "devDependencies": {
     "live-server": "^1.2.1"

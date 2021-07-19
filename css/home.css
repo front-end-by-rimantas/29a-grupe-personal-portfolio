@@ -1,10 +1,48 @@
 /* base */
 @import './base/reset.css';
+@import './base/layout.css';
 @import './base/variables.css';
+@import './base/layout.css';
 
 /* 3rd-party */
 
 /* components */
 @import './components/button.css';
+@import './components/intro.css';
 
 /* CUSTOM STYLE FOR HOME PAGE */
+
+/* HEADER START */
+@import './header/menu.css';
+@import './header/header.css';
+/* HEADER END */
+
+/* INTRODUCTION START */
+/* INTRODUCTION END */
+
+/* ABOUT START */
+/* ABOUT END */
+
+/* SERVICES START */
+/* SERVICES END */
+
+/* COUNTER START */
+/* COUNTER END */
+
+/* FEATURED PROJECTS START */
+/* FEATURED PROJECTS END */
+
+/* FEEDBACK START */
+/* FEEDBACK END */
+
+/* PLANS START */
+/* PLANS END */
+
+/* BLOG START */
+/* BLOG END */
+
+/* PARTNERS START */
+/* PARTNERS END */
+
+/* FOOTER START */
+/* FOOTER END */
