@@ -19,10 +19,12 @@ body {
     font-size: 20px; 
     margin-bottom: 40px;
 }
+.intro h6{
+    letter-spacing: 2px;
+}
 
 .about h6 {
     margin: 20px 0 30px 0;
-    letter-spacing: 2px;
 }
 
 .about p {
