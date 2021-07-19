@@ -1,0 +1,24 @@
+h1 {
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+h6 {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+p {
+    font-family: sans-serif;
+    color: #777777;
+    line-height: 1.625em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
