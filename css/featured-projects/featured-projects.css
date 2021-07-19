@@ -50,7 +50,7 @@
         left: 0;
         height: 2px;
         background: #333;
-        transition: all 150ms ease-out;
+        transition: all 250ms ease-out;
     }
 
     .featured-projects > .row.project-types > div > .vector:hover::after {
@@ -88,6 +88,10 @@
 
 .featured-projects > .row.images > div > .img-container {
     position: relative;
+}
+
+.featured-projects > .row.images > .hidden {
+    display: none;
 }
 
 .featured-projects > .row.images > div > .img-container > img {
