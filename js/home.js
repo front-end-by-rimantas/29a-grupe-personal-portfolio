@@ -1,6 +1,7 @@
 /* IMPORTS */
 import { Intro } from "./components/Intro.js";
 import { About } from "./components/About.js";
+import { Counter } from "./components/counter.js";
 
 /* CODE EXECUTION */
 
@@ -23,6 +24,8 @@ about.init();
 /* SERVICES END */
 
 /* COUNTER START */
+const counter = new Counter(".counter");
+counter.init();
 /* COUNTER END */
 
 /* FEATURED PROJECTS START */
