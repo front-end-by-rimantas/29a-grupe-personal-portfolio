@@ -1,0 +1,24 @@
+.feedback {
+    padding-top: 120px;
+    background-color: #f9f9ff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.feedback h1 {
+    padding-bottom: 0px;
+    font-size: 36px;
+    text-transform:none;
+    line-height:0.5em;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 800px) {
+}
+
+@media (min-width: 1080px) {
+}
