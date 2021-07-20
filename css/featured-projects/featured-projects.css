@@ -114,6 +114,10 @@
     opacity: 0.8;
 }
 
+.featured-projects > .row.images > div > .img-container > .overlay:hover > img {
+    opacity: 1;
+}
+
 .featured-projects > .row.images > div > .img-container > .overlay > img {
     position: absolute;
     top: 50%;
