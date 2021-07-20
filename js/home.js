@@ -1,7 +1,7 @@
 /* IMPORTS */
 import { Intro } from "./components/Intro.js";
 import { About } from "./components/About.js";
-
+import { Services } from "./components/services.js";
 /* CODE EXECUTION */
 
 /* HEADER START */
@@ -20,6 +20,8 @@ about.init();
 /* ABOUT END */
 
 /* SERVICES START */
+const services = new Services(".services");
+services.init();
 /* SERVICES END */
 
 /* COUNTER START */
