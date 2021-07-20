@@ -1,6 +1,7 @@
 @media (min-width: 800px) {
+
 .container > .row > .service-start {
-    grid-column-start: 4
+        grid-column-start: 4;
     }
 }
 .service-header {

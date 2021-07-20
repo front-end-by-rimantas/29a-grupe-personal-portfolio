@@ -35,16 +35,15 @@ class Services {
         return true;
     }
     render() {
-        const HTML =`<div class ="container">
-                        <div class="row">
+        const HTML =`<div class="row">
                             <div class ="col-12 col-md-6 col-lg-6 service-start">
                                 <h1 class="service-header">My offered services</h1>
                                 <p class="service-text">At about this time of year, some months after New Year’s resolutions have been made and kept, or made and neglected.</p>
                             </div>
                         </div> 
-                        <div class="row">   
+                        <div class="row service-main">   
                             <div class="col-12 col-md-6 col-lg-4">
-                                <a href="/"   class="service-link">
+                                <a href="/" class="service-link">
                                     <i class="icon fa fa-pie-chart"></i>             
                                     <h4>Web Design</h4>
                                 </a>
@@ -64,7 +63,7 @@ class Services {
                                 </a>
                                 <p class="service-text">“It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.”</p>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 service-body">
+                            <div class="col-12 col-md-6 col-lg-4">
                                 <a href="/" class="service-link">
                                     <i class="icon fa fa-picture-o"></i>
                                     <h4>Clipping Path</h4>
