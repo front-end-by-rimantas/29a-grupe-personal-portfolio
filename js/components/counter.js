@@ -61,4 +61,23 @@ class Counter {
 
 }
 
-export { Counter }
+export { Counter };
+
+window.addEventListener("load", function(){
+const counters = document.querySelectorAll('.counter');
+const speed = 200;
+
+counters.forEach(counter=> {
+    const upCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = Math.round(target / speed);
+
+        if(count < target){
+            counter.innerText = count + inc;
+            setTimeout(upCount, 1);
+        }
+    }
+    upCount();
+})
+});

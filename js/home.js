@@ -24,8 +24,8 @@ about.init();
 /* SERVICES END */
 
 /* COUNTER START */
-const counter = new Counter(".counter");
-counter.init();
+const count = new Counter(".counteris");
+count.init();
 /* COUNTER END */
 
 /* FEATURED PROJECTS START */
