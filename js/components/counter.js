@@ -63,14 +63,18 @@ class Counter {
 
 export { Counter };
 
-window.addEventListener("load", function(){
+
+window.addEventListener("load", () => {
 const counters = document.querySelectorAll('.counter');
-const speed = 200;
+const speed = 400;
+const box = document.querySelector("section.box")
+
 
 counters.forEach(counter=> {
     const upCount = () => {
         const target = +counter.getAttribute('data-target');
         const count = +counter.innerText;
+
         const inc = Math.round(target / speed);
 
         if(count < target){
@@ -78,6 +82,10 @@ counters.forEach(counter=> {
             setTimeout(upCount, 1);
         }
     }
-    upCount();
-})
+    window.addEventListener("scroll", () => {
+        if (box.getBoundingClientRect().top < window.innerHeight){
+            upCount();
+        }
+    });
+});
 });

@@ -4,8 +4,9 @@
   padding: 0;
 }
 .box {
-  background: rgb(0,131,255);
-  background: linear-gradient(90deg, rgba(0,131,255,1) 0%, rgba(8,182,230,1) 100%, rgba(255,255,255,1) 100%);
+  background: -moz-linear-gradient(0deg,#8490ff 0%,#62bdfc 100%);
+  background: -webkit-linear-gradient(0deg,#8490ff 0%,#62bdfc 100%);
+  background: -ms-linear-gradient(0deg,#8490ff 0%,#62bdfc 100%);
   color: white;
 }
 .box {
