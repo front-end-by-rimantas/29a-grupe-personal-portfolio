@@ -1,6 +1,7 @@
 /* IMPORTS */
 import { Intro } from "./components/Intro.js";
 import { About } from "./components/About.js";
+
 import { Counter } from "./components/counter.js";
 
 /* CODE EXECUTION */
