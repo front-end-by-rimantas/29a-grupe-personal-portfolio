@@ -79,11 +79,11 @@ counters.forEach(counter=> {
 
         if(count < target){
             counter.innerText = count + inc;
-            setTimeout(upCount, 1);
+            setTimeout(upCount, 40);
         }
     }
     window.addEventListener("scroll", () => {
-        if (box.getBoundingClientRect().bottom < window.innerHeight){
+        if (box.getBoundingClientRect().top < window.innerHeight){
             upCount();
         }
     });
