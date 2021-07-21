@@ -2,6 +2,7 @@
 import { Intro } from "./components/Intro.js";
 import { About } from "./components/About.js";
 import { Services } from "./components/services.js";
+import { Counter } from "./components/counter.js";
 /* CODE EXECUTION */
 
 /* HEADER START */
@@ -25,6 +26,8 @@ services.init();
 /* SERVICES END */
 
 /* COUNTER START */
+const count = new Counter(".counteris");
+count.init();
 /* COUNTER END */
 
 /* FEATURED PROJECTS START */
