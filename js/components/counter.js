@@ -40,7 +40,7 @@ class Counter {
         const HTML = `<section class="box">
         <div class="countBox">
             <h1 class="counter" data-target="2536">0</h1>
-            <h6>projects compleated</h6>
+            <h6>projects completed</h6>
         </div>
         <div class="countBox">
             <h1 class="counter" data-target="6784">0</h1>
