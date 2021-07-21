@@ -79,7 +79,7 @@ counters.forEach(counter=> {
 
         if(count < target){
             counter.innerText = count + inc;
-            setTimeout(upCount, 40);
+            setTimeout(upCount, 10);
         }
     }
     window.addEventListener("scroll", () => {
