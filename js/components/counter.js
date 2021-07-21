@@ -67,7 +67,7 @@ export { Counter };
 window.addEventListener("load", () => {
 const counters = document.querySelectorAll('.counter');
 const speed = 300;
-const box = document.querySelector("section.box")
+const box = document.querySelector("h1.counter")
 
 
 counters.forEach(counter=> {
