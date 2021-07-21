@@ -1,5 +1,4 @@
 .feedback {
-    padding-top: 120px;
     background-color: #f9f9ff;
 }
 
@@ -7,11 +6,77 @@
     text-align: center;
 }
 
+.flex-title {
+    padding-top: 120px;    
+    padding-bottom: 50px;
+}
+
 .feedback h1 {
-    padding-bottom: 0px;
     font-size: 36px;
     text-transform:none;
     line-height:0.5em;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px 20px;
+}
+
+.flex-item {
+    display: flex;
+    width: 40%;
+    padding-bottom: 120px;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 25px 30px 12px 30px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.testimonial .thumb {
+    margin-right: 30px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+  
+.testimonial:hover {
+    cursor: pointer;
+ }
+    
+.testimonial:hover h4 {
+    color: #8490ff;
+    cursor: pointer;
+}
+
+.flex-arrow-up {
+    background: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.flex-arrow-down {
+    background: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
 }
 
 @media (min-width: 640px) {
