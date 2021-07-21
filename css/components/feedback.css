@@ -22,25 +22,22 @@
     flex-flow: row wrap;
     justify-content: center;
     gap: 20px 20px;
+    align-items:center;
 }
 
 .flex-item {
     display: flex;
-    width: 40%;
-    padding-bottom: 120px;
+    width: 100%;
 }
 
 .testimonial {
+    display: flex;
     background-color: #fff;
     padding: 25px 30px 12px 30px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-}
-
-.d-flex {
-    display: flex;
 }
 
 .testimonial .thumb {
@@ -61,29 +58,59 @@
     cursor: pointer;
 }
 
-.flex-arrow-up {
-    background: white;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    margin: auto;
-    padding: 10px;
+.flex-arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.flex-arrow-down {
-    background: white;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    margin: auto;
-    padding: 10px;
+.flex-arrow-up, .flex-arrow-down {
+    background-color: white;
+    box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.2);
+    padding: 12px 18px;
+    color: #000;
+    font-weight: 500;
+    border: 1px solid #f5f5f5;
+    display: inline-flex;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+   
+.arrow-up:hover .flex-arrow-up {
+    background-color: #8490ff;
+    color: white;
+    cursor: pointer;
+}
+
+.arrow-dn:hover .flex-arrow-down {
+    background-color: #8490ff;
+    color: white;
+    cursor: pointer;
+}
+
+.bottom {
+    padding-bottom: 100px;
 }
 
 @media (min-width: 640px) {
+    .flex-item {
+        width: 700px;
+    }
 }
 
 @media (min-width: 800px) {
+    .flex-item {
+        width: 320px;
+    }
+    .flex-arrow {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 1080px) {
+    .flex-item {
+        width: 465px;
+    }
 }
