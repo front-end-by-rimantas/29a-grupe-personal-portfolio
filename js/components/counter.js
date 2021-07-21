@@ -83,7 +83,7 @@ counters.forEach(counter=> {
         }
     }
     window.addEventListener("scroll", () => {
-        if (box.getBoundingClientRect().top < window.innerHeight){
+        if (box.getBoundingClientRect().bottom < window.innerHeight){
             upCount();
         }
     });
