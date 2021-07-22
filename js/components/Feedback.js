@@ -12,9 +12,8 @@ class Feedback {
         this.dnArrowDOM = null;
         this.animationInProgress = false;
         this.animationDuration = 250;
-        this.itemsPerView = 0;
+        this.itemsPerView = 1;
         this.visibleItemIndex = 0;
-
     }
 
     init() {
@@ -44,24 +43,19 @@ class Feedback {
     }
 
     generateItems(data) {
-        let itemsCount = 1; // data.length;
-        console.log(data);
+        const itemsCount = data.length;
+        const itemWidth = 100 / itemsCount;
         let HTML = '';
-
-        if (window.innerWidth >= 800) {
-            itemsCount = 2;
-        }
 
         for (let i = 0; i < itemsCount; i++) {
             const obj = new this.component({
                 ...data[i],
                 imgPath: this.data.imgPath
             });
-            HTML += `<div class="flex-item">
+            HTML += `<div class="item" style="width: ${itemWidth}%;">
                         ${obj.HTML()}
                     </div>`;
         }
-
         return HTML;
     }
 
@@ -71,25 +65,25 @@ class Feedback {
             ...this.data.list,
             ...this.data.list.slice(0, itemsPerView)
         ];
-        let itemsCount = 1; // clonedData.length;
-
-        if (window.innerWidth >= 800) {
-            itemsCount = 2;
-        }
-
+        const itemsCount = clonedData.length;
         const listWidth = itemsCount / itemsPerView * 100;
-        const translate = 0; //itemsPerView / itemsCount * 100;
+        const translate = itemsPerView / itemsCount * 100;
 
-        const HTML = `  <div class="bottom">
-                            <div class="flex-title">
-                                <div class="text-center">
-                                    <h1>Client’s Feedback About Me</h1>
-                                    <p>It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or
+        const HTML = `<div class="bottom">
+                        <div class="flex-title">
+                            <div class="text-center">
+                                <h1>Client’s Feedback About Me</h1>
+                                <p>It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or
                                         even a person.</p>
+                            </div>
+                        </div>
+                        <div class="carousel">
+                            <div class="gallery">
+                                <div class="list" style="width: ${listWidth}%; transform: translateX(-${translate}%);">
+                                    ${this.generateItems(clonedData)}
                                 </div>
                             </div>
-                            <div class="list" style="transform: translateX(-${translate}%);">
-                                ${this.generateItems(clonedData)}
+                            <div class="controls">
                                 <div class="flex-arrow">
                                     <div class="arrow-up">
                                         <div class="flex-arrow-up"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></div>
@@ -99,7 +93,8 @@ class Feedback {
                                     </div>
                                 </div>
                             </div>
-                        </div>`;
+                        </div>
+                    </div>`;
 
         this.DOM.innerHTML = HTML;
         this.listDOM = this.DOM.querySelector('.list');
@@ -116,14 +111,12 @@ class Feedback {
                 itemsToRender = responsive[i].itemsCount;
             }
         }
-
         return itemsToRender;
     }
 
     slideAnimation() {
         const translate = this.visibleItemIndex / (this.data.list.length + 2 * this.itemsPerView) * 100;
-        console.log( translate);
-        this.listDOM.style.transform = `translateX(-${translate}%)`;  // translate3d(101%,0,0)
+        this.listDOM.style.transform = `translateX(-${translate}%)`;
     }
 
     addEvents() {
@@ -148,7 +141,6 @@ class Feedback {
                     setTimeout(() => {
                         this.listDOM.style.transition = 'all 0s';
                         this.visibleItemIndex = this.data.list.length;
-                        console.log(this.visibleItemIndex);
                         this.slideAnimation();
                     }, this.animationDuration);
                     setTimeout(() => {

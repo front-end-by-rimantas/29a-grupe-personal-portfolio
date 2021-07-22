@@ -2,11 +2,11 @@
     background-color: #f9f9ff;
 }
 
-.text-center {
+.feedback .text-center {
     text-align: center;
 }
 
-.flex-title {
+.feedback .flex-title {
     padding-top: 120px;    
     padding-bottom: 50px;
 }
@@ -17,22 +17,50 @@
     line-height:0.5em;
 }
 
-.list {
+.feedback .carousel {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 30px 12px 30px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.carousel > .gallery {
+    display: inline-block;
     width: 100%;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 20px 20px;
-    align-items:center;
+    overflow: hidden;
+}
+
+.carousel > .gallery > .list {
+    display: inline-block;
+    width: 100%;
     transition: all 0.25s;
 }
 
-.flex-item {
-    display: flex;
+.carousel .list > .item {
     width: 100%;
+    padding: 0px  15px;
+    float: left;
 }
 
-.testimonial {
+.carousel .list > .item:hover {
+    cursor: pointer;
+ }
+    
+ .carousel .list > .item:hover h4 {
+    color: #8490ff;
+    cursor: pointer;
+}
+
+.carousel .thumb > .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel .item > .interface {
     display: flex;
     background-color: #fff;
     padding: 25px 30px 12px 30px;
@@ -42,25 +70,18 @@
     transition: all 0.3s ease 0s;
 }
 
-.testimonial .thumb {
+.carousel .interface > .thumb {
     margin-right: 30px;
 }
 
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-  
-.testimonial:hover {
-    cursor: pointer;
+.carousel > .controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
  }
-    
-.testimonial:hover h4 {
-    color: #8490ff;
-    cursor: pointer;
-}
-
-.flex-arrow {
+  
+ .controls .flex-arrow {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,27 +113,31 @@
     cursor: pointer;
 }
 
-.bottom {
-    padding-bottom: 100px;
+.feedback > .bottom {
+    padding-bottom: 80px;
 }
 
 @media (min-width: 640px) {
-    .flex-item {
+    .carousel .list > .item {
         width: 700px;
     }
 }
 
 @media (min-width: 800px) {
-    .flex-item {
+    .carousel .list > .item {
         width: 320px;
     }
-    .flex-arrow {
+    /* .controls .flex-arrow {
         flex-direction: column;
-    }
+    } */
 }
 
 @media (min-width: 1080px) {
-    .flex-item {
+    .feedback .carousel {
+        padding: 25px 90px 12px 90px;
+    }
+    .carousel .list > .item {
         width: 465px;
     }
 }
+  

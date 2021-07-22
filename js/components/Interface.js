@@ -5,7 +5,7 @@ class Interface {
 
     HTML() {
         const src = this.data.imgPath + this.data.src;
-        return `<div class="testimonial">
+        return `<div class="interface">
                     <div class="thumb">
                         <img class="img-fluid" src="${src}" alt="${this.data.name}">
                     </div>
@@ -16,6 +16,8 @@ class Interface {
                     </div>
                 </div>`;
     }
+
+
 }
 
 export { Interface }
