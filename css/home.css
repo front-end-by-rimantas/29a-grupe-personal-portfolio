@@ -28,7 +28,7 @@
 /* SERVICES END */
 
 /* COUNTER START */
-@import './components/counter.css'
+@import './components/counter.css';
 /* COUNTER END */
 
 /* FEATURED PROJECTS START */
@@ -47,4 +47,5 @@
 /* PARTNERS END */
 
 /* FOOTER START */
+@import './components/footer.css';
 /* FOOTER END */
