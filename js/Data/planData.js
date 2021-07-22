@@ -38,5 +38,4 @@ const planData = [
     },
 ];
 
-
 export { planData };
