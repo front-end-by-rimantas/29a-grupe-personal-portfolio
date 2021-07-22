@@ -37,6 +37,9 @@ count.init();
 /* FEEDBACK END */
 
 /* PLANS START */
+import { planData } from './data/planData.js';
+import { planCards } from './components/plan.js';
+planCards(planData);
 /* PLANS END */
 
 /* BLOG START */
@@ -47,3 +50,4 @@ count.init();
 
 /* FOOTER START */
 /* FOOTER END */
+
