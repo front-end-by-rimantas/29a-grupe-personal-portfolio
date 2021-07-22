@@ -17,12 +17,14 @@
     line-height:0.5em;
 }
 
-.flex-container {
+.list {
     display: flex;
+    width: 100%;
     flex-flow: row wrap;
     justify-content: center;
     gap: 20px 20px;
     align-items:center;
+    transition: all 0.25s;
 }
 
 .flex-item {

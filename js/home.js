@@ -1,6 +1,9 @@
 /* IMPORTS */
 import { Intro } from "./components/Intro.js";
 import { About } from "./components/About.js";
+import { Feedback } from "./components/Feedback.js";
+import { Interface } from './components/Interface.js';
+import { interfaceData } from './data/interfaceData.js';
 
 /* CODE EXECUTION */
 
@@ -8,7 +11,6 @@ import { About } from "./components/About.js";
 /* HEADER END */
 
 /* INTRODUCTION START */
-
 const intro = new Intro(".intro");
 intro.init();
 
@@ -17,6 +19,7 @@ intro.init();
 /* ABOUT START */
 const about = new About(".about");
 about.init();
+
 /* ABOUT END */
 
 /* SERVICES START */
@@ -29,6 +32,9 @@ about.init();
 /* FEATURED PROJECTS END */
 
 /* FEEDBACK START */
+const feedback = new Feedback(".feedback", Interface, interfaceData);
+feedback.init();
+
 /* FEEDBACK END */
 
 /* PLANS START */
