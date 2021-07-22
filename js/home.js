@@ -5,6 +5,7 @@ import { featuredProjectsData } from "./components/featured-projects/featuredPro
 import { About } from "./components/About.js";
 import { Services } from "./components/services.js";
 import { Counter } from "./components/counter.js";
+import { Footer } from "./components/footer.js";
 /* CODE EXECUTION */
 
 /* HEADER START */
@@ -53,5 +54,6 @@ planCards(planData);
 /* PARTNERS END */
 
 /* FOOTER START */
+const footer = new Footer(".footer");
+footer.init();
 /* FOOTER END */
-
