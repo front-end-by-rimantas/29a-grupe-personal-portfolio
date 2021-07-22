@@ -1,8 +1,9 @@
 "use strict";
 
 class FeaturedProjects {
-    constructor(selector) {
+    constructor(selector, data) {
         this.selector = selector;
+        this.data = data;
         this.DOM = null;
         this.types = null;
         this.imageBlocks = null;
@@ -11,6 +12,7 @@ class FeaturedProjects {
 
     init() {
         if (this.isValidSelector() && this.findTargetElement()) {
+            this.render();
             this.addEvents();
             this.generateModal();
             this.addModalEvents();
@@ -38,6 +40,23 @@ class FeaturedProjects {
         return true;
     }
 
+    render() {
+        let HTML = "";
+        this.data.forEach(i => {
+            HTML += `<div class="col-12 col-sm-4 image-block">
+            <div class="img-container">
+                <img src=${i.src} alt="img">
+                <div class="overlay">
+                    <img src="./img/featured-projects/binoculars.png" class="binoculars" alt="binoculars">
+                </div>
+            </div>                
+            <h4>${i.h4}</h4>
+            <p>${i.p}</p>
+        </div>`
+        });
+        this.DOM.querySelector(".images").innerHTML += HTML;
+    }
+
     addEvents() {
         this.types = this.DOM.querySelectorAll("div > div > span"); 
         let types = this.types;
@@ -62,7 +81,6 @@ class FeaturedProjects {
             for (let i = 0; i < binoculars.length; i++) {
                 document.querySelectorAll(".binoculars")[i].replaceWith(binoculars[i]);
             }
-            console.log(document.querySelectorAll(".binoculars"));
             removeEvents();
             generateModal();
             addModalEvents();
@@ -83,11 +101,9 @@ class FeaturedProjects {
                 i.style.color = "#333";
             }
             types[1].style.color = "#8490ff";
-            console.log(binoculars);
             for (let i = 0; i < binoculars.length; i++) {
                 document.querySelectorAll(".binoculars")[i].replaceWith(binoculars[i]);
             }
-            console.log(document.querySelectorAll(".binoculars"));
             removeEvents();
             generateModal();
             addModalEvents();
@@ -253,9 +269,7 @@ class FeaturedProjects {
 
         for (let i = 0; i < document.querySelectorAll(".binoculars:not(.hidden)").length; i++) {
             document.querySelectorAll(".binoculars:not(.hidden)")[i].addEventListener("click", function() {
-                console.log(slides);
                 modal.style.display = "block";               
-                console.log(i);
                 slides[i].style.display = "block";
                 n = i;
             });

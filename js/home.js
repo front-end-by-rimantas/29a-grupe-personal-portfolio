@@ -1,6 +1,7 @@
 /* IMPORTS */
 import { Intro } from "./components/Intro.js";
 import { FeaturedProjects } from "./components/featured-projects/FeaturedProjects.js"
+import { featuredProjectsData } from "./components/featured-projects/featuredProjectsData.js";
 /* CODE EXECUTION */
 
 /* HEADER START */
@@ -22,7 +23,7 @@ intro.init();
 /* COUNTER END */
 
 /* FEATURED PROJECTS START */
-const featuredProjects = new FeaturedProjects(".featured-projects");
+const featuredProjects = new FeaturedProjects(".featured-projects", featuredProjectsData);
 featuredProjects.init();
 /* FEATURED PROJECTS END */
 
