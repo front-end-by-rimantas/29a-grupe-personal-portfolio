@@ -1,36 +1,35 @@
 body {
-        font-family: "Poppins",sans-serif;
-        font-size: 14px;
-}
-
-.intro {
-    background-color: #f9f9ff;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-
-h1 {
-    text-transform: uppercase;
-    margin: 20px 0;
-    font-weight: 600;
-    font-size: 30px;
-}
-
-h6 {
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 2px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14px;
 }
 
-p {
-    color: #777777;
-    line-height: 1.625em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+.intro {
+    margin-top: 70px;
+    background-color: #f9f9ff;
+    padding-bottom: 0px;
 }
+
+.about {
+    margin-top: 70px;
+    padding-bottom: 100px;
+    background-color: #fff;
+}
+
+.about h1 {
+    font-size: 20px; 
+    margin-bottom: 40px;
+}
+.intro h6{
+    letter-spacing: 2px;
+}
+
+.about h6 {
+    margin: 20px 0 30px 0;
+}
+
+.about p {
+    margin-bottom: 30px;
+} 
 
 .introImg {
     float: center; 
@@ -39,25 +38,67 @@ p {
     margin-right: 10%;
 } 
 
+.aboutImg {
+    float: center; 
+    width: 100%;
+}
+
 @media (min-width: 640px) {
     .introImg {
         float: left; 
-        width: 80%;
-        margin: 10%;
     } 
 }
 
 @media (min-width: 800px) {
+    .intro {
+        margin-top: 70px;
+        padding-top: 100px;
+    }
+    .introImg {
+        width: 92%;
+        margin-left: 0;
+        margin-right: 0;
+    } 
     .intro-left {
         padding-top: 100px;
+    }
+    .about-right {
+        padding-top: 100px;
+    }
+    .aboutImg {
+        padding-top: 130px;
+        padding-left: 10px;
+        width: 95%;
+    }
+    .about {
+        margin-top: 0px;
+    }
+    .about h6 {
+        margin: -20px 0 30px 0;
     }
 }
 
 @media (min-width: 1080px) {
-    h1 {
-        font-size: 20px;
+    .intro {
+        margin-top: 70px;
+        padding-top: 100px;
+        padding-bottom: 0px;
+    }
+    .intro h1 {
+        font-size: 54px;
     }
     .intro-left {
-        padding-top: 200px;
+        padding-top: 70px;
+    }
+    .about-right {
+        padding: 140px 20px 0px 100px;
+    }
+    .about h1 {
+        font-size: 34px;
+    }
+    .aboutImg {
+        padding-top: 80px;
+        padding-left: 20px;
+        width: 100%;
     }
 }
