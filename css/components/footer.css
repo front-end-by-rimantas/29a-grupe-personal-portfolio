@@ -24,6 +24,9 @@
     color: white;
     margin-right: 12px;
 }
+.footer-section > .social-icon:hover {
+    color: #8490ff;
+}
 .input {
     display: flex;
     
