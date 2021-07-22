@@ -3,6 +3,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+.featured-projects > .row.gap-start {
+    margin-top: 50px;
+}
+
 .featured-projects > .row.gap {
     margin-top: 70px;
 }
