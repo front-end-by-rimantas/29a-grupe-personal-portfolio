@@ -1,6 +1,6 @@
 /* IMPORTS */
 import { Intro } from "./components/Intro.js";
-import { FeaturedProjects } from "./components/FeaturedProjects.js"
+import { FeaturedProjects } from "./components/featured-projects/FeaturedProjects.js"
 /* CODE EXECUTION */
 
 /* HEADER START */

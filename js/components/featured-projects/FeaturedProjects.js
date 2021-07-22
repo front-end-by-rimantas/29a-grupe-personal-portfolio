@@ -45,17 +45,25 @@ class FeaturedProjects {
         let imageBlocks = this.imageBlocks;
         let generateModal = this.generateModal.bind(this);
         let addModalEvents = this.addModalEvents.bind(this);
-        let removeModalEvents = this.removeModalEvents.bind(this);
+        let removeEvents = this.removeEvents.bind(this);
+        let binoculars = document.querySelectorAll(".binoculars")
         
         types[0].addEventListener("click", function() {
             for (let i of imageBlocks) {
+                i.classList.remove("hidden");
+            }
+            for (let i of binoculars) {
                 i.classList.remove("hidden");
             }
             for (let i of types) {
                 i.style.color = "#333";
             }
             types[0].style.color = "#8490ff";
-            removeModalEvents();
+            for (let i = 0; i < binoculars.length; i++) {
+                document.querySelectorAll(".binoculars")[i].replaceWith(binoculars[i]);
+            }
+            console.log(document.querySelectorAll(".binoculars"));
+            removeEvents();
             generateModal();
             addModalEvents();
         });
@@ -64,13 +72,23 @@ class FeaturedProjects {
             for (let i of imageBlocks) {
                 i.classList.add("hidden");
             }
+            for (let i of binoculars) {
+                i.classList.add("hidden");
+            }
             imageBlocks[0].classList.remove("hidden");
             imageBlocks[4].classList.remove("hidden");
+            binoculars[0].classList.remove("hidden");
+            binoculars[4].classList.remove("hidden");
             for (let i of types) {
                 i.style.color = "#333";
             }
             types[1].style.color = "#8490ff";
-            removeModalEvents();
+            console.log(binoculars);
+            for (let i = 0; i < binoculars.length; i++) {
+                document.querySelectorAll(".binoculars")[i].replaceWith(binoculars[i]);
+            }
+            console.log(document.querySelectorAll(".binoculars"));
+            removeEvents();
             generateModal();
             addModalEvents();
         });
@@ -79,13 +97,21 @@ class FeaturedProjects {
             for (let i of imageBlocks) {
                 i.classList.add("hidden");
             }
+            for (let i of binoculars) {
+                i.classList.add("hidden");
+            }
             imageBlocks[1].classList.remove("hidden");
             imageBlocks[5].classList.remove("hidden");
+            binoculars[1].classList.remove("hidden");
+            binoculars[5].classList.remove("hidden");
             for (let i of types) {
                 i.style.color = "#333";
             }
             types[2].style.color = "#8490ff";
-            removeModalEvents();
+            for (let i = 0; i < binoculars.length; i++) {
+                document.querySelectorAll(".binoculars")[i].replaceWith(binoculars[i]);
+            }
+            removeEvents();
             generateModal();
             addModalEvents();
         });
@@ -94,12 +120,19 @@ class FeaturedProjects {
             for (let i of imageBlocks) {
                 i.classList.add("hidden");
             }
+            for (let i of binoculars) {
+                i.classList.add("hidden");
+            }
             imageBlocks[2].classList.remove("hidden");
+            binoculars[2].classList.remove("hidden");
             for (let i of types) {
                 i.style.color = "#333";
             }
             types[3].style.color = "#8490ff";
-            removeModalEvents();
+            for (let i = 0; i < binoculars.length; i++) {
+                document.querySelectorAll(".binoculars")[i].replaceWith(binoculars[i]);
+            }
+            removeEvents();
             generateModal();
             addModalEvents();
         });
@@ -108,12 +141,19 @@ class FeaturedProjects {
             for (let i of imageBlocks) {
                 i.classList.add("hidden");
             }
+            for (let i of binoculars) {
+                i.classList.add("hidden");
+            }
             imageBlocks[3].classList.remove("hidden");
+            binoculars[3].classList.remove("hidden");
             for (let i of types) {
                 i.style.color = "#333";
             }
             types[4].style.color = "#8490ff";
-            removeModalEvents();
+            for (let i = 0; i < binoculars.length; i++) {
+                document.querySelectorAll(".binoculars")[i].replaceWith(binoculars[i]);
+            }
+            removeEvents();
             generateModal();
             addModalEvents();
         });
@@ -211,45 +251,47 @@ class FeaturedProjects {
         let slides = document.getElementsByClassName("mySlides");
         let n;
 
-        for (let i = 0; i < document.getElementsByClassName("binoculars").length; i++) {
-            document.getElementsByClassName("binoculars")[i].addEventListener("click", function _listener() {
+        for (let i = 0; i < document.querySelectorAll(".binoculars:not(.hidden)").length; i++) {
+            document.querySelectorAll(".binoculars:not(.hidden)")[i].addEventListener("click", function() {
                 console.log(slides);
                 modal.style.display = "block";               
-                console.log("event works");
                 console.log(i);
                 slides[i].style.display = "block";
                 n = i;
-
-                document.getElementsByClassName("binoculars")[i].removeEventListener("click", _listener, true);
-            }, true);
+            });
         }
 
-        document.getElementsByClassName("prev")[0].addEventListener("click", function _listener() {
+        document.querySelector(".prev").addEventListener("click", function() {
             slides[n].style.display = "none";
             n--;
+            if (n < 0) {
+                n = slides.length - 1;
+            }
             slides[n].style.display = "block";
-            document.getElementsByClassName("prev")[0].removeEventListener("click", _listener, true);
-        }, true);
+        });
 
-        document.getElementsByClassName("next")[0].addEventListener("click", function _listener() {
+        document.querySelector(".next").addEventListener("click", function() {
             slides[n].style.display = "none";
             n++;
+            if (n > slides.length - 1) {
+                n = 0;
+            }
             slides[n].style.display = "block";
-            document.getElementsByClassName("next")[0].removeEventListener("click", _listener, true);
-        }, true);
+        });
 
-        document.getElementsByClassName("close")[0].addEventListener("click", function _listener() {
-            modal.style.display = none;
-            document.getElementsByClassName("close")[0].removeEventListener("click", _listener, true);
-        }, true);
+        document.querySelector(".close").addEventListener("click", function() {
+            modal.style.display = "none";
+            slides[n].style.display = "none";
+        });
     }
 
-    removeModalEvents() {
-        document.getElementsByClassName("binoculars")[i].removeEventListener("click", _listener, true);
-        document.getElementsByClassName("prev")[0].removeEventListener("click", _listener, true);
-        document.getElementsByClassName("next")[0].removeEventListener("click", _listener, true);
-        document.getElementsByClassName("close")[0].removeEventListener("click", _listener, true);
-    }
+    removeEvents() {
+        let oldElement = document.querySelectorAll(".binoculars");
+        for (let i of oldElement) {
+            let newElement = i.cloneNode(i, true)
+            i.parentNode.replaceChild(newElement, i);
+        }
+    } 
 }
 
 export { FeaturedProjects }
