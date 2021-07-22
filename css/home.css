@@ -32,6 +32,8 @@
 /* COUNTER END */
 
 /* FEATURED PROJECTS START */
+@import './featured-projects/featured-projects.css';
+@import './featured-projects/modal.css';
 /* FEATURED PROJECTS END */
 
 /* FEEDBACK START */
