@@ -1,0 +1,47 @@
+
+.footer {
+    background-color: #04091e;
+    
+    padding:120px 0;
+}
+.footer-section {
+    padding-right:20px;
+    padding-left: 20px;
+
+}
+.footer-section > h4 {
+    color: white;
+    margin-bottom: 25px;
+}
+.footer-section > p {
+    margin: 0 0 16px;
+}
+.footer-section > p > a {
+    color: #8490ff;
+}
+
+.footer-section > .social-icon {
+    color: white;
+    margin-right: 12px;
+}
+.footer-section > .social-icon:hover {
+    color: #8490ff;
+}
+.input {
+    display: flex;
+    
+}
+.email {
+    width: 80%;
+    border: none;
+}
+.submit {
+    background-color: #8490ff;
+}
+.arrow {
+    display: inline-block;
+    color: white;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    border: none;
+}

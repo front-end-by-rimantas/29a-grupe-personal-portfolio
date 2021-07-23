@@ -5,6 +5,7 @@ nav {
     float: right;
     grid-column: 12;
     align-items: center;
+    
 }
 nav > a {
     text-decoration: none;

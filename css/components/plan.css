@@ -1,0 +1,139 @@
+.plan > .container > #plans-block > .cards > .title {
+   margin-top: 20px;
+   margin-bottom: 8px;
+}
+.plan > .container > #plans-block >.cards >h2{
+    font-size: 36px;
+}
+.plan > .container > #plans-block > .cards:hover .title {
+    color: white;
+}
+
+.plan > .container > #plans-block > .cards:hover p {
+    color: white;
+}
+
+.plan > .container > #plans-block > .cards > .p1 {
+   margin-top: 30px;
+   padding: 10px 0;
+   border-top: 1px solid #eee;
+}
+
+.plan > .container > #plans-block > .cards:hover .p1 {
+    color: #fff;
+}
+.plan > .container > .row > .col-12 > h1 {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.plan > .container > .row > .col-12 > p {
+    display: flex;
+    justify-content: center;
+}
+
+.plan > .container > #plans-block {
+    display: inline-block;
+    margin-top: 80px;
+
+}
+
+.plan > .container > #plans-block > .cards {
+    display: inline-block;
+    text-align: center;
+    background-color: #f9f9ff;
+    padding: 40px 20px;
+    cursor: grab;
+    transition: all 0.4s;
+}
+.plan > .container > #plans-block > .cards:hover {
+    background: var(--color-blue-gradiant);
+    transform: scale(1.05);
+}
+
+.plan > .container > #plans-block > .cards > .num {
+    font-weight: 300;
+    font-size: 36px;
+    background-color: rgba(132, 144, 255, 0.1);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    border: 30px solid rgba(132, 144, 255, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    align-items: center;
+}
+
+.plan > .container > #plans-block > .cards:hover .num {
+   color: white;
+   border-color: #9CC1FD;
+}
+
+
+.plan > .container > #plans-block > .cards > .p2 {
+   padding: 10px 0;
+   border-top: 1px solid #eee;
+}
+
+.plan > .container > #plans-block > .cards:hover .p2 {
+    color: #fff;
+}
+
+.plan > .container > #plans-block > .cards > .p3 {
+   padding: 10px 0;
+   border-top: 1px solid #eee;
+   border-bottom: 1px solid #eee;
+   margin-bottom: 30px;
+   
+}
+
+.plan > .container > #plans-block > .cards:hover .p3 {
+    color: #fff;
+}
+
+.plan > .container > #plans-block > .cards:hover h2 {
+    display: none;
+
+}
+
+.plan > .container > #plans-block > .cards a {
+   display: none;
+}
+.plan > .container > #plans-block > .cards:hover a {
+    background-color: #fff;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 50px;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+:root {
+    --color-blue-gradiant: linear-gradient(to right,  #8490ff 0%,#62bdfc 100%);
+    --color-hover-text: #8490ff;
+    --color-light-background: #f9f9ff;
+}
+
+@media (min-width: 576px) {
+    .plan > .container > #plans-block > .cards {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .plan > .container > #plans-block > .cards {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+@media (min-width: 992px) {
+    .plan > .container > #plans-block > .cards {
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    }
+}
