@@ -173,6 +173,27 @@ class Feedback {
                 }, this.animationDuration);
             }
         })
+
+        setInterval(() => {
+            if (!this.animationInProgress) {
+                this.animationInProgress = true;
+                this.visibleItemIndex++;
+                this.slideAnimation();
+                if (this.data.list.length + this.itemsPerView === this.visibleItemIndex) {
+                    setTimeout(() => {
+                        this.listDOM.style.transition = 'all 0s';
+                        this.visibleItemIndex = this.itemsPerView;
+                        this.slideAnimation();
+                    }, this.animationDuration);
+                    setTimeout(() => {
+                        this.listDOM.style.transition = `all ${this.animationDuration}ms`;
+                    }, this.animationDuration + 10)
+                }
+                setTimeout(() => {
+                    this.animationInProgress = false;
+                }, this.animationDuration);
+            }
+        }, 5000);
     }
 }
 
