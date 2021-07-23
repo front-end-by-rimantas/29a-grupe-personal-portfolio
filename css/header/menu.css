@@ -1,3 +1,15 @@
+header {
+    transition: all 0.5s;
+}
+
+.scrolled {
+    box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
+.menu-home {
+    color: #8490ff;
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -5,14 +17,64 @@ nav {
     float: right;
     grid-column: 12;
     align-items: center;
-    
+    font-weight: 500; 
 }
-nav > a {
+
+nav > span {
+    display: flex;
+    position: relative;
+}
+
+nav > a,
+nav > span > a, 
+nav > span > div > a {   
     text-decoration: none;
-    color: #777777;
+    color: #222;
     font-size: 14px;
+    transition: color 0.3s ease 0s;
 }
-.menu-home {
+
+nav > a:hover, 
+nav > span:hover > a,
+nav > span > div > a:hover {
     color: #8490ff;
-    font-weight: 550;
+}
+
+nav > span > .icon {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+nav > span > .pages-dropdown {
+    display: none;
+}
+
+nav > span > .blog-dropdown {
+    display: flex;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    padding: 5px 10px;
+    top: 50px;
+    right: -10px;
+    box-shadow: 0 0 30px rgba(127,137,161,.25);
+    background: #fff;
+    transition: all 0.3s;
+
+}
+
+nav > span > .blog-dropdown > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+nav > span .visible {
+    display: flex;
+}
+
+nav > span .visible-opacity {
+    opacity: 1;
 }

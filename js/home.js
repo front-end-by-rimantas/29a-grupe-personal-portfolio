@@ -9,10 +9,13 @@ import { interfaceData } from './data/interfaceData.js';
 import { Services } from "./components/services.js";
 import { Counter } from "./components/counter.js";
 import { Footer } from "./components/footer.js";
+import { Menu } from "./components/Menu.js";
 
 /* CODE EXECUTION */
 
 /* HEADER START */
+const menu = new Menu(".headerContainer");
+menu.init();
 /* HEADER END */
 
 /* INTRODUCTION START */
