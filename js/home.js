@@ -9,6 +9,7 @@ import { interfaceData } from './data/interfaceData.js';
 import { Services } from "./components/services.js";
 import { Counter } from "./components/counter.js";
 import { Footer } from "./components/footer.js";
+import { Partners } from "./components/partners.js";
 
 /* CODE EXECUTION */
 
@@ -58,6 +59,8 @@ planCards(planData);
 /* BLOG END */
 
 /* PARTNERS START */
+const partners = new Partners(".partners");
+partners.init();
 /* PARTNERS END */
 
 /* FOOTER START */
