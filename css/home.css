@@ -7,7 +7,6 @@
 @import './3rd-party/font-awesome.min.css';
 /* components */
 @import './components/button.css';
-@import './components/intro.css';
 @import './components/sectionHeader.css';
 
 /* CUSTOM STYLE FOR HOME PAGE */
@@ -18,6 +17,7 @@
 /* HEADER END */
 
 /* INTRODUCTION START */
+@import './components/intro.css';
 /* INTRODUCTION END */
 
 /* ABOUT START */
@@ -37,6 +37,7 @@
 /* FEATURED PROJECTS END */
 
 /* FEEDBACK START */
+@import './components/feedback.css';
 /* FEEDBACK END */
 
 /* PLANS START */

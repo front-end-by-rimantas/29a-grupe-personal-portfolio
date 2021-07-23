@@ -1,0 +1,184 @@
+.feedback {
+    position: relative;
+    background-color: #f9f9ff;
+}
+
+.feedback .text-center {
+    text-align: center;
+}
+
+.feedback .flex-title {
+    padding-top: 120px;    
+    padding-bottom: 50px;
+}
+
+.feedback h1 {
+    font-size: 36px;
+    text-transform:none;
+    line-height:1.2em;
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+.feedback p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.feedback .carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 30px 12px 30px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.carousel > .gallery {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel > .gallery > .list {
+    display: inline-block;
+    width: 100%;
+    transition: all 0.25s;
+}
+
+.carousel .list > .item {
+    width: 100%;
+    padding: 0px  15px;
+    float: left;
+}
+
+.carousel .list > .item:hover {
+    cursor: pointer;
+ }
+    
+ .carousel .list > .item:hover h4 {
+    color: #8490ff;
+    cursor: pointer;
+}
+
+.carousel .thumb > .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel .item > .interface {
+    display: flex;
+    background-color: #fff;
+    padding: 25px 30px 12px 30px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.carousel .interface > .thumb {
+    margin-right: 30px;
+}
+
+.carousel > .controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+ }
+  
+ .controls .flex-arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-arrow-up, .flex-arrow-down {
+    background-color: white;
+    box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.2);
+    padding: 12px 18px;
+    color: #000;
+    font-weight: 500;
+    border: 1px solid #f5f5f5;
+    display: inline-flex;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+   
+.arrow-up:hover .flex-arrow-up {
+    background-color: #8490ff;
+    color: white;
+    cursor: pointer;
+}
+
+.arrow-dn:hover .flex-arrow-down {
+    background-color: #8490ff;
+    color: white;
+    cursor: pointer;
+}
+
+.feedback > .bottom {
+    padding-bottom: 80px;
+}
+
+@media (min-width: 1080px) {
+    .feedback .carousel {
+        padding: 25px 90px 12px 90px;
+    }
+    .controls .flex-arrow {
+        flex-direction: column;
+        position: absolute;
+        right: 50px;
+        top: 58%;        
+    }
+}
+
+@media (min-width: 1200px) {
+    .feedback .carousel {
+        padding: 25px 100px 12px 100px;
+    }
+    .controls .flex-arrow {
+        right: 60px;     
+    }
+}
+
+@media (min-width: 1400px) {
+    .feedback .carousel {
+        padding: 25px 200px 12px 200px;
+    }
+    .controls .flex-arrow {
+        right: 160px;    
+    }
+}
+
+@media (min-width: 1600px) {
+    .feedback .carousel {
+        padding: 25px 300px 12px 300px;
+    }
+    .controls .flex-arrow {
+        right: 260px; 
+    }
+}
+
+@media (min-width: 1800px) {
+    .feedback .carousel {
+        padding: 25px 400px 12px 400px;
+    }
+    .controls .flex-arrow {
+        right: 360px;    
+    }
+}
+
+@media (min-width: 2000px) {
+    .feedback .carousel {
+        padding: 25px 500px 12px 500px;
+    }
+    .controls .flex-arrow {
+        right: 460px;    
+    }
+}
+  
