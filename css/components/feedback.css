@@ -136,4 +136,49 @@
         top: 58%;        
     }
 }
+
+@media (min-width: 1200px) {
+    .feedback .carousel {
+        padding: 25px 100px 12px 100px;
+    }
+    .controls .flex-arrow {
+        right: 60px;     
+    }
+}
+
+@media (min-width: 1400px) {
+    .feedback .carousel {
+        padding: 25px 200px 12px 200px;
+    }
+    .controls .flex-arrow {
+        right: 160px;    
+    }
+}
+
+@media (min-width: 1600px) {
+    .feedback .carousel {
+        padding: 25px 300px 12px 300px;
+    }
+    .controls .flex-arrow {
+        right: 260px; 
+    }
+}
+
+@media (min-width: 1800px) {
+    .feedback .carousel {
+        padding: 25px 400px 12px 400px;
+    }
+    .controls .flex-arrow {
+        right: 360px;    
+    }
+}
+
+@media (min-width: 2000px) {
+    .feedback .carousel {
+        padding: 25px 500px 12px 500px;
+    }
+    .controls .flex-arrow {
+        right: 460px;    
+    }
+}
   
