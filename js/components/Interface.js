@@ -16,8 +16,6 @@ class Interface {
                     </div>
                 </div>`;
     }
-
-
 }
 
 export { Interface }
