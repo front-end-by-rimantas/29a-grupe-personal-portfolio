@@ -43,6 +43,9 @@ class Menu {
 
         let span = document.querySelectorAll(".headerContainer span");
         let blogDropdown = document.querySelector(".blog-dropdown");
+        let pagesDropdown = document.querySelector(".pages-dropdown");
+        let level2 = document.querySelector(".level-2");
+        let level2Dropdown = document.querySelector(".level-2-dropdown");
 
         span[0].addEventListener("mouseenter", function () {
             blogDropdown.classList.add("visible");
@@ -52,10 +55,57 @@ class Menu {
         });
 
         span[0].addEventListener("mouseleave", function () {
-            blogDropdown.classList.remove("visible-opacity");
-            setTimeout(function () {
-                blogDropdown.classList.remove("visible");
-            }, 300);
+            setTimeout(function() {
+                if (!blogDropdown.matches(":hover") && !span[0].matches(":hover")) {
+                    blogDropdown.classList.remove("visible-opacity");
+                    setTimeout(function () {
+                        blogDropdown.classList.remove("visible");
+                    }, 800);
+                }
+            }, 700);
+        });
+
+        span[1].addEventListener("mouseenter", function() {
+            pagesDropdown.classList.add("visible");
+            setTimeout(function() {
+                pagesDropdown.classList.add("visible-opacity");
+            }, 20);
+        });
+
+        span[1].addEventListener("mouseleave", function () {
+            setTimeout(function() {
+                if (!pagesDropdown.matches(":hover") && !span[1].matches(":hover") && !level2Dropdown.matches(":hover")) {
+                    pagesDropdown.classList.remove("visible-opacity");
+                    setTimeout(function () {
+                        pagesDropdown.classList.remove("visible");
+                    }, 800);
+                }
+            }, 700);
+        });
+
+        level2.addEventListener("mouseenter", function() {
+            level2Dropdown.classList.add("visible");
+            setTimeout(function() {
+                level2Dropdown.classList.add("visible-opacity");
+            }, 20);
+        });
+
+        level2.addEventListener("mouseleave", function() {
+            setTimeout(function() {
+                if (!level2Dropdown.matches(":hover")) {
+                    level2Dropdown.classList.remove("visible-opacity");
+                    setTimeout(function () {
+                        level2Dropdown.classList.remove("visible");
+                    }, 800);
+                }
+            }, 700);
+        });
+
+        level2Dropdown.addEventListener("mouseleave", function () {
+                    level2Dropdown.classList.remove("visible-opacity");
+                    setTimeout(function () {
+                        level2Dropdown.classList.remove("visible");
+                    }, 800);
         });
     }
 }

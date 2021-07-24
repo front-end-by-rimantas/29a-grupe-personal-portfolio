@@ -27,7 +27,8 @@ nav > span {
 
 nav > a,
 nav > span > a, 
-nav > span > div > a {   
+nav > span > div > a,
+nav > span > div > div > a {   
     text-decoration: none;
     color: #222;
     font-size: 14px;
@@ -36,7 +37,8 @@ nav > span > div > a {
 
 nav > a:hover, 
 nav > span:hover > a,
-nav > span > div > a:hover {
+nav > span > div > a:hover,
+nav > span > div > div > a:hover {
     color: #8490ff;
 }
 
@@ -45,12 +47,7 @@ nav > span > .icon {
     margin-left: 5px;
 }
 
-nav > span > .pages-dropdown {
-    display: none;
-}
-
 nav > span > .blog-dropdown {
-    display: flex;
     display: none;
     opacity: 0;
     flex-direction: column;
@@ -62,19 +59,59 @@ nav > span > .blog-dropdown {
     box-shadow: 0 0 30px rgba(127,137,161,.25);
     background: #fff;
     transition: all 0.3s;
-
+    transition-delay: 0.3s;
 }
 
-nav > span > .blog-dropdown > a {
+nav > span > .blog-dropdown > a,
+nav > span > .pages-dropdown > a,
+nav > span > .pages-dropdown > .level-2-dropdown > a {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
 }
 
-nav > span .visible {
+nav > span > .pages-dropdown {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    padding: 5px 10px;
+    top: 50px;
+    right: -10px;
+    box-shadow: 0 0 30px rgba(127,137,161,.25);
+    background: #fff;
+    transition: all 0.3s;
+    transition-delay: 0.3s;
+}
+
+
+nav > span > .pages-dropdown > a > .level-2-icon {
+    margin-top: 2px;
+    padding-left: 100px;
+}
+
+nav > span > .pages-dropdown > .level-2-dropdown {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    padding: 5px 10px;
+    top: 43px;
+    right: 200px;
+    box-shadow: 0 0 30px rgba(127,137,161,.25);
+    background: #fff;
+    transition: all 0.3s;
+    transition-delay: 0.3s;
+}
+
+nav > span .visible,
+nav > span > .pages-dropdown > .level-2-dropdown.visible {
     display: flex;
 }
 
-nav > span .visible-opacity {
+nav > span .visible-opacity,
+nav > span > .pages-dropdown > .level-2-dropdown.visible-opacity {
     opacity: 1;
 }
