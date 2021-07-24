@@ -18,6 +18,42 @@ width: 1250px;
 display: flex;
 justify-content: center;
 }
+.slick-slide {
+    margin: 0 20px;
+}
+.slick-slide img {
+    width: 100%;
+}
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img {
+    display: block;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
 
 
 .slideLogo > a > img {
@@ -27,7 +63,5 @@ justify-content: center;
     opacity: 1;
 }
 .slideLogo {
-    margin: auto;
-    padding: 0 30px 0 30px;
 }
 

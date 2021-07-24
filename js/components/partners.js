@@ -55,4 +55,11 @@ class Partners {
 }
 
 export { Partners };
-
+window.addEventListener("load", () => {
+    $('.sliderWraper').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false
+    });
+});
