@@ -33,6 +33,9 @@ class Menu {
     }
 
     addEvents() {
+
+        //Large screen menu
+
         window.addEventListener("scroll", function () {
             if (this.scrollY > 200) {
                 document.querySelector("header").classList.add("scrolled");
@@ -107,6 +110,29 @@ class Menu {
                         level2Dropdown.classList.remove("visible");
                     }, 800);
         });
+
+        //Small screen menu
+
+        let icons = document.querySelectorAll(".mobile-menu .fa")
+        let mobileDropdowns = document.querySelectorAll(".mobile-dropdown");
+        console.log(icons);
+        console.log(mobileDropdowns);
+
+        for (let i = 0; i < icons.length; i++) {
+            icons[i].addEventListener("click", function() {
+                if (icons[i].classList.contains("fa-chevron-down")) {
+                    icons[i].classList.replace("fa-chevron-down", "fa-chevron-up");
+                } else {
+                    icons[i].classList.replace("fa-chevron-up", "fa-chevron-down");
+                }
+
+                if (mobileDropdowns[i].style.maxHeight) {
+                    mobileDropdowns[i].style.maxHeight = null;
+                } else {
+                    mobileDropdowns[i].style.maxHeight = mobileDropdowns[i].scrollHeight + "px";
+                }
+            });
+        }
     }
 }
 
