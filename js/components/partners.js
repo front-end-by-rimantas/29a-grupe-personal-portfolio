@@ -36,7 +36,8 @@ class Partners {
     }
 
     render() {
-        const HTML = `<div class="partnersContainer">
+        const HTML = `
+        <div class="partnersContainer">
         <div class="partnersSlide">
             <div class="sliderWraper">
             <div class="slideLogo"><a href="./"><img src="./img/partner-logos/splogo1.png"></a></div>
@@ -54,3 +55,4 @@ class Partners {
 }
 
 export { Partners };
+
