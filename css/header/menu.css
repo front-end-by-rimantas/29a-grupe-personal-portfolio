@@ -136,6 +136,7 @@ nav > span > .pages-dropdown > .level-2-dropdown.visible-opacity {
     font-weight: 400;
     line-height: 1.625em;
     white-space: nowrap;
+    transition: all 0.3s;
 }
 
 .mobile-menu a > span {
@@ -176,7 +177,7 @@ nav > span > .pages-dropdown > .level-2-dropdown.visible-opacity {
 }
 
 .mobile-menu .mobile-level-2-icon {
-    padding-left: 182px;
+    padding-left: 152px;
 }
 
 .mobile-blog-dropdown,
@@ -185,6 +186,15 @@ nav > span > .pages-dropdown > .level-2-dropdown.visible-opacity {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+.mobile-blog-dropdown,
+.mobile-pages-dropdown {
+    margin-left: 30px;
+}
+
+.mobile-level-2-dropdown {
+    margin-left: 30px;
 }
 
 .mobile-overlay {
