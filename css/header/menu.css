@@ -1,17 +1,239 @@
+header {
+    transition: all 0.5s;
+}
+
+.scrolled {
+    box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
+.menu-home {
+    color: #8490ff;
+}
+
 nav {
-    display: flex;
+    display: none;
     flex-direction: row;
     gap: 20px;
     float: right;
     grid-column: 12;
     align-items: center;
+    font-weight: 500; 
 }
-nav > a {
+
+nav > span {
+    display: flex;
+    position: relative;
+}
+
+nav a {
     text-decoration: none;
-    color: #777777;
+    color: #222;
     font-size: 14px;
+    transition: color 0.3s ease 0s;
 }
-.menu-home {
+
+nav > a:hover, 
+nav > span:hover > a,
+nav > span > div > a:hover,
+nav > span > div > div > a:hover {
     color: #8490ff;
-    font-weight: 550;
+}
+
+nav > span > .icon {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+nav > span > .blog-dropdown,
+nav > span > .pages-dropdown {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    padding: 5px 10px;
+    top: 50px;
+    right: -10px;
+    box-shadow: 0 0 30px rgba(127,137,161,.25);
+    background: #fff;
+    transition: all 0.3s;
+    transition-delay: 0.3s;
+}
+
+nav > span > .blog-dropdown > a,
+nav > span > .pages-dropdown > a,
+nav > span > .pages-dropdown > .level-2-dropdown > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+nav > span > .pages-dropdown > a > .level-2-icon {
+    margin-top: 2px;
+    padding-left: 100px;
+}
+
+nav > span > .pages-dropdown > .level-2-dropdown {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    padding: 5px 10px;
+    top: 43px;
+    right: 200px;
+    box-shadow: 0 0 30px rgba(127,137,161,.25);
+    background: #fff;
+    transition: all 0.3s;
+    transition-delay: 0.3s;
+}
+
+nav > span .visible,
+nav > span > .pages-dropdown > .level-2-dropdown.visible {
+    display: flex;
+}
+
+nav > span .visible-opacity,
+nav > span > .pages-dropdown > .level-2-dropdown.visible-opacity {
+    opacity: 1;
+}
+
+.mobile-menu-img {
+    display: flex;
+    position: absolute;
+    width: 24px;
+    margin-top: 4px;
+    grid-column: 12;
+    right: 20px;
+}
+
+.mobile-menu-img:hover {
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: fixed;
+    flex-direction: column;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: width 0.5s;
+}
+
+.mobile-menu a {
+    font-family: sans-serif;
+    cursor: pointer;
+    display: flex;
+    color: #fff;
+    padding: 10px 22px 10px 15px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.625em;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.mobile-menu a > span {
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.625em;
+    white-space: nowrap;
+}
+
+.mobile-home {
+    margin-top: 20px;
+}
+
+.mobile-menu .fa {
+    padding-left: 180px;
+    cursor: pointer;
+}
+
+.mobile-menu .blue-color {
+    color: #8490ff;
+}
+
+.mobile-menu .blue-color > span:hover {
+    color: #fff;
+}
+
+.mobile-home:hover {
+    color: #8490ff !important;
+}
+
+.mobile-menu i {
+    color: #fff;
+}
+
+.mobile-menu .mobile-blog-icon {
+    padding-left: 188px;
+}
+
+.mobile-menu .mobile-level-2-icon {
+    padding-left: 152px;
+}
+
+.mobile-blog-dropdown,
+.mobile-pages-dropdown,
+.mobile-level-2-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.mobile-blog-dropdown,
+.mobile-pages-dropdown {
+    margin-left: 30px;
+}
+
+.mobile-level-2-dropdown {
+    margin-left: 30px;
+}
+
+.mobile-overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: black;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.mobile-close-img {
+    display: none;
+    z-index: -1;
+    cursor: pointer;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.no-scrolling {
+    overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+    .headerContainer > div > div > nav {
+        display: flex;
+    }
+
+    .mobile-menu-img {
+        display: none;
+    }
+
+    .mobile-overlay {
+        display: none;
+    }
 }

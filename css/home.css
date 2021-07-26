@@ -3,12 +3,11 @@
 @import './base/layout.css';
 @import './base/variables.css';
 @import './base/layout.css';
-
 /* 3rd-party */
-
+@import './3rd-party/font-awesome.min.css';
 /* components */
 @import './components/button.css';
-@import './components/intro.css';
+@import './components/sectionHeader.css';
 
 /* CUSTOM STYLE FOR HOME PAGE */
 
@@ -18,24 +17,31 @@
 /* HEADER END */
 
 /* INTRODUCTION START */
+@import './components/intro.css';
 /* INTRODUCTION END */
 
 /* ABOUT START */
 /* ABOUT END */
 
 /* SERVICES START */
+@import './services/services.css';
 /* SERVICES END */
 
 /* COUNTER START */
+@import './components/counter.css';
 /* COUNTER END */
 
 /* FEATURED PROJECTS START */
+@import './featured-projects/featured-projects.css';
+@import './featured-projects/modal.css';
 /* FEATURED PROJECTS END */
 
 /* FEEDBACK START */
+@import './components/feedback.css';
 /* FEEDBACK END */
 
 /* PLANS START */
+@import './components/plan.css';
 /* PLANS END */
 
 /* BLOG START */
@@ -45,4 +51,5 @@
 /* PARTNERS END */
 
 /* FOOTER START */
+@import './components/footer.css';
 /* FOOTER END */
